@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const Globalstyle = createGlobalStyle`
+body{
+  padding:0;
+  margin:0;
+}`;
 
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
   render() {
     return (
-      <Container>
-        <Button> Hello </Button>
-        <Button danger> Hello</Button>
-      </Container>
+      <div>
+        <Globalstyle />
+        <Container>
+          <Button> Hello </Button>
+          <Button danger> Hello</Button>
+        </Container>
+      </div>
     );
   }
 }
