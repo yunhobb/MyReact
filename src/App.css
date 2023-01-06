@@ -1,38 +1,21 @@
-.App {
-  text-align: center;
+.button{
+    border-radius: 50px; /* 모서리 둥글기*/
+    padding: 5px;   /*여백*/
+    min-width: 120px;   /*요소의 최소 너비*/
+    color: white;   /*색*/
+    font-weight: 600;   /*폰트의 가중치 or 굵기*/
+    -webkit-appearance: none;   /*화살표 제거?*/
+    cursor: pointer;    /*손가락 모양 포인터*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button:active,
+.button:focus{
+    outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button--success{
+    background-color: #2ecc71;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button--danger{
+    background-color: #e74c4c;
 }
