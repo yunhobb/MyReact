@@ -1,20 +1,37 @@
-import React, { Component, Fragment } from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
   render() {
     return (
-      <Fragment key="key">
-        <button type="button" className="button button--success">
-          Hello
-        </button>
-        <button type="button" className="button button--danger">
-          Hello
-        </button>
-      </Fragment>
+      <Container>
+        <Button> Hello </Button>
+        <Button danger> Hello</Button>
+      </Container>
     );
   }
 }
+
+const Container = styled.div`
+  height: 100vh;
+  width: 100%;
+  background-color: pink;
+`;
+
+const Button = styled.button`
+  border-radius: 50px;
+  padding: 5px;
+  min-width: 120px;
+  color: white;
+  font-weight: 600;
+  -webkit-appearance: none;
+  cursor: pointer;
+  &:active, 
+  &:focus{
+    outline. none;
+  };
+  background-color: ${props => (props.danger ? '#e74c4c' : '#2ecc71')}
+`;
 
 export default App;
