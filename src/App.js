@@ -16,6 +16,7 @@ class App extends Component {
         <Container>
           <Button> Hello </Button>
           <Button danger> Hello</Button>
+          <Anchor href="http:google.com"> Go to google</Anchor>
         </Container>
       </div>
     );
@@ -43,6 +44,8 @@ const Button = styled.button`
   background-color: ${props => (props.danger ? '#e74c4c' : '#2ecc71')}
 `;
 
-export default App;
+const Anchor = Button.withComponent('a').extend`
+  text-decoration:none
+`;
 
-//test1
+export default App;
